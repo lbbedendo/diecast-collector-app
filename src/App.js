@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import TypoGraphy from '@material-ui/core/Typography'
-import Navbar from './Menu/Navbar'
+import Dashboard from './dashboard/Dashboard'
 
 class App extends Component {
   render() {
@@ -15,10 +15,9 @@ class App extends Component {
             >
               Diecast Collector
            </TypoGraphy>
-           <Navbar />
           </Toolbar>
         </AppBar>
-
+        <Dashboard />
       </div>
     );
   }
