@@ -17,7 +17,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import { mainListItems } from './listItems';
 import Models from './Models';
-import Chart from './Chart';
+import ChartByAutomaker from './charts/ChartByAutomaker';
+import ChartByCollection from './charts/ChartByCollection';
 
 function Copyright() {
   return (
@@ -110,6 +111,7 @@ const useStyles = makeStyles(theme => ({
   },
   fixedHeight: {
     height: 300,
+    width: 450
   },
 }));
 
@@ -164,7 +166,12 @@ export default function Dashboard() {
           <Grid container spacing={3}>
             <Grid item xs={12} md={8} lg={9}>
               <Paper className={fixedHeightPaper}>
-                <Chart />
+                <ChartByAutomaker />
+              </Paper>
+            </Grid>
+            <Grid item xs={12} md={8} lg={9}>
+              <Paper className={fixedHeightPaper}>
+                <ChartByCollection />
               </Paper>
             </Grid>
             <Grid item xs={12}>
